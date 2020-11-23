@@ -12,7 +12,7 @@ public class App {
             int user_inp = scanner.nextInt();
             if (user_inp == 1) {
                 //方法一
-//                int x = (int) (Math.random() * 100 % 100);
+//                 int x = (int) (Math.random() * 100 % 100);
 //                int y = (int) (Math.random() * 100 % 100);
 
 //                System.out.println("x随机坐标"+x);
