@@ -5,6 +5,9 @@ public class App2 {
        while (true){
 
            Thread.sleep(1000);
+           
+           //           System.out.println("(x,y)("+(int) (Math.random() * 100 % 100) +
+//                    ","+(int) (Math.random() * 100 % 100)+")"+"\n");
 
            System.out.println("x随机坐标"+(int) (Math.random() * 100 % 100) +
                    "\n"  + "y随机坐标"+(int) (Math.random() * 100 % 100)+"\n");
