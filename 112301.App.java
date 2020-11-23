@@ -11,7 +11,7 @@ public class App {
             Scanner scanner = new Scanner(System.in);
             int user_inp = scanner.nextInt();
             if (user_inp == 1) {
-                //方法一
+                //方法一 输入1，随机输出x,y坐标
 //                 int x = (int) (Math.random() * 100 % 100);
 //                int y = (int) (Math.random() * 100 % 100);
 
