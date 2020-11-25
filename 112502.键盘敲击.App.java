@@ -27,9 +27,10 @@ public class App {
                 if (e.getKeyCode()==KeyEvent.VK_ENTER){
                     if (textArea_A.getText().equals("李金花")){//正确答案李金花
                         textArea_B.append("回答正确");
-                        
+
                     }else {
                         textArea_B.append("回答错误，再猜\n");
+                        textArea_A.setText("");
 
                     }
 
