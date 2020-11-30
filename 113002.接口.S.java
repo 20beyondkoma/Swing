@@ -10,7 +10,13 @@ public interface S {
 		int [][]array2d= {{1,2,3},{4,5,6}}; 
 
 		System.out.println(boy_filePath+"\n"+grill_filePath);
-		System.out.println(array2d[1][1]);
+for (int l = 0; l < array2d.length; l++) {
+			
+			for (int h = 0; h < array2d[0].length; h++) {
+				System.out.print(array2d[l][h]+" ");
+			}
+			System.out.println();
+		}
 	 }
 
 
