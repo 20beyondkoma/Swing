@@ -135,6 +135,7 @@ public class App2 {
 
         JTextArea_A.setText("");
         JTextArea_A.setBounds(0,0,200,30);
+         JTextArea_A.setVisible(false);
         myPanel.add(JTextArea_A);
 
 
