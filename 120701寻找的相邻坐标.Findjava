@@ -4,128 +4,137 @@ public class Find {
 
 
 //		void shuzu(int array2d[][]) {
-			
-//			
+
+//
 //			for (int row = 0; row < array2d.length; row++) {
-//				
+//
 //				for (int cloumn = 0; cloumn < array2d[0].length; cloumn++) {
 //					if (array2d[cloumn][row]==0) {
 //						System.out.println("坐标是:("+cloumn+","+row+")");
-//						
+//
 //					}
 //				}
-//				
-//			
-//		
-//		
+//
+//
+//
+//
 //		}
-			
-	void shuzu(int R_Zero[][]) {
-		
-			for (int x = 0; x < R_Zero.length; x++) {
-				
-				for (int y = 0; y < R_Zero[0].length; y++) {
-				if (R_Zero[x][y]==0) {
-						System.out.println("0坐标是:("+y+","+x+")");
-				
-					}		
-				
-				}
-			}
-	
-		
-		}
 
-	
-	void shuzu2(int R_left[][]) {
-		
-		for (int x = 0; x < R_left.length; x++) {
-			
-			for (int y = 0; y < R_left[0].length; y++) {
-			if (R_left[x][y]==0) {
-					System.out.println("0的左边10坐标是:("+(y-1)+","+x+")");
-			
-				}		
-			
-			}
-			
+    void shuzu(int R_Zero[][]) {
 
-	
-	}
+        for (int x = 0; x < R_Zero.length; x++) {
 
-	
-	
-}
+            for (int y = 0; y < R_Zero[0].length; y++) {
+                if (R_Zero[x][y]==0) {
+                    System.out.println("0坐标是:("+y+","+x+")");
+
+                }
+
+            }
+        }
 
 
-void shuzu3(int R_right[][]) {
-		
-		for (int x = 0; x < R_right.length; x++) {
-			
-			for (int y = 0; y < R_right[0].length; y++) {
-			if (R_right[x][y]==0) {
-					System.out.println("0的右边12坐标是:("+(y+1)+","+x+")");
-			
-				}		
-			
-			}
-			
+    }
 
-	
-	}
 
-	
-	
-}
+    void shuzu2(int R_left[][]) {
+
+        for (int x = 0; x < R_left.length; x++) {
+
+            for (int y = 0; y < R_left[0].length; y++) {
+                if (R_left[x][y]==0) {
+                    System.out.println("0的左边10坐标是:("+(y-1)+","+x+")");
+                    if ((y-1)<0){
+                        System.out.println("0的左边坐标是:超出边界");
+
+                    }
+                }
+
+
+            }
 
 
 
+        }
 
 
 
+    }
 
-void shuzu4(int R_up[][]) {
-		
-		for (int x = 0; x < R_up.length; x++) {
-			
-			for (int y = 0; y < R_up[0].length; y++) {
-			if (R_up[x][y]==0) {
-					System.out.println("0的上边5坐标是:("+y+","+(x-1)+")");
-			
-				}		
-			
-			}
-			
 
-	
-	}
+    void shuzu3(int R_right[][]) {
 
-	
-	
-}
+        for (int x = 0; x < R_right.length; x++) {
+
+            for (int y = 0; y < R_right[0].length; y++) {
+                if (R_right[x][y]==0) {
+                    System.out.println("0的右边12坐标是:("+(y+1)+","+x+")");
+                    if ((y+1)<0){
+                        System.out.println("0的右边坐标是:超出边界");
+
+                    }
+
+                }
+
+
+            }
+
+
+
+        }
+
+
+
+    }
 
 
 
 
-void shuzu5(int R_down[][]) {
-		
-		for (int x = 0; x < R_down.length; x++) {
-			
-			for (int y = 0; y < R_down[0].length; y++) {
-			if (R_down[x][y]==0) {
-					System.out.println("0的下边11坐标是:("+y+","+(x+1)+")");
-			
-				}		
-			
-			}
-			
 
-	
-	}
 
-	
-	
-}
+
+    void shuzu4(int R_up[][]) {
+
+        for (int x = 0; x < R_up.length; x++) {
+
+            for (int y = 0; y < R_up[0].length; y++) {
+                if (R_up[x][y]==0) {
+                    System.out.println("0的上边5坐标是:("+y+","+(x-1)+")");
+
+                }
+
+            }
+
+
+
+        }
+
+
+
+    }
+
+
+
+
+    void shuzu5(int R_down[][]) {
+
+        for (int x = 0; x < R_down.length; x++) {
+
+            for (int y = 0; y < R_down[0].length; y++) {
+                if (R_down[x][y]==0) {
+                    System.out.println("0的下边11坐标是:("+y+","+(x+1)+")");
+
+                }
+
+            }
+
+
+
+        }
+
+
+
+    }
 
 
 
