@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
@@ -10,6 +11,9 @@ public class App {
     JLabel label_txt=new JLabel();
     JTextArea textArea_A = new JTextArea();
     JLabel label_foreground=new JLabel();
+    JLabel cores=new JLabel();
+    int footmath=0;
+
     int array2d[][]={
 //            {1,3,2},
 //            {4,7,6},
@@ -47,6 +51,8 @@ public class App {
 //                    new Zero().goUp(array2d);
 //                    new Zero().goUp(array2d);
                         showMyGame();
+                        footmath++;
+                        cores.setText(String.valueOf("你移动的步数：" + footmath));
                     }
 
 
@@ -55,6 +61,8 @@ public class App {
                         new Zero().goDown(array2d);
 
                         showMyGame();
+                        footmath++;
+                        cores.setText(String.valueOf("你移动的步数：" + footmath));
                     }
 
 
@@ -63,6 +71,9 @@ public class App {
                         new Zero().goRight(array2d);
 
                         showMyGame();
+
+                        footmath++;
+                        cores.setText(String.valueOf("你移动的步数：" + footmath));
                     }
 
 
@@ -71,6 +82,9 @@ public class App {
                         new Zero().goLeft(array2d);
 
                         showMyGame();
+
+                        footmath++;
+                        cores.setText(String.valueOf("你移动的步数：" + footmath));
                     }
 
 
@@ -92,7 +106,7 @@ public class App {
                     for(int i = 0; i < array2d.length; i++){
                         if(!Arrays.equals(array2d[i],lastarray2d[i])){
                             mark=false;
-                            textArea_A.append("恭喜你，拼图成功");
+
                         }
                     }
 
@@ -128,7 +142,10 @@ public class App {
 
     //显示窗体方法go()
     void go(){
-
+        cores.setText("你移动的步数：");
+        cores.setBounds(10,20,100,50);
+        cores.setForeground(Color.red);
+        myPanel.add(cores);
 
         //网格
         java.net.URL imgURL999 = App.class.getResource("img/foreground.png");
@@ -137,11 +154,11 @@ public class App {
         myPanel.add(label_foreground);
 
 
-
-
-        label_txt.setText("你移动了");
-        label_txt.setBounds(0,0,200,30);
-        myPanel.add(label_txt);
+//
+//
+//        label_txt.setText("你移动步");
+//        label_txt.setBounds(0,0,200,30);
+//        myPanel.add(label_txt);
 
 
         myPanel.setLayout(null);
