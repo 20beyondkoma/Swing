@@ -8,7 +8,6 @@ import java.util.List;
 public class App {
     JPanel myPanel=new JPanel();
     JLabel label_txt=new JLabel();
-
     JTextArea textArea_A = new JTextArea();
     JLabel label_foreground=new JLabel();
     int array2d[][]={
@@ -40,42 +39,42 @@ public class App {
                 super.keyPressed(e);//敲击任意键。
 //                以下三行代码，表示有图小图相对于窗体向下移动了三步
 
-if (array2d!=lastarray2d)
-{
-                if (e.getKeyCode()==KeyEvent.VK_UP){
+                if (array2d!=lastarray2d)
+                {
+                    if (e.getKeyCode()==KeyEvent.VK_UP){
 
-                    new Zero().goUp(array2d);
+                        new Zero().goUp(array2d);
 //                    new Zero().goUp(array2d);
 //                    new Zero().goUp(array2d);
-                    showMyGame();
+                        showMyGame();
+                    }
+
+
+                    if (e.getKeyCode()==KeyEvent.VK_DOWN){
+
+                        new Zero().goDown(array2d);
+
+                        showMyGame();
+                    }
+
+
+                    if (e.getKeyCode()==KeyEvent.VK_RIGHT){
+
+                        new Zero().goRight(array2d);
+
+                        showMyGame();
+                    }
+
+
+                    if (e.getKeyCode()==KeyEvent.VK_LEFT){
+
+                        new Zero().goLeft(array2d);
+
+                        showMyGame();
+                    }
+
+
                 }
-
-
-                if (e.getKeyCode()==KeyEvent.VK_DOWN){
-
-                    new Zero().goDown(array2d);
-
-                    showMyGame();
-                }
-
-
-                if (e.getKeyCode()==KeyEvent.VK_RIGHT){
-
-                    new Zero().goRight(array2d);
-
-                    showMyGame();
-                }
-
-
-                if (e.getKeyCode()==KeyEvent.VK_LEFT){
-
-                    new Zero().goLeft(array2d);
-
-                    showMyGame();
-                }
-
-
-}
 
 //
 //                    for(int i = 0; i < array2d.length; i++){
@@ -86,21 +85,21 @@ if (array2d!=lastarray2d)
 //            textArea_A.append("恭喜你，拼图成功");
 //                        }
 //                    }
-boolean mark=true;
+                boolean mark=true;
 
-            if (array2d.length==lastarray2d.length){
+                if (array2d.length==lastarray2d.length){
 
-                for(int i = 0; i < array2d.length; i++){
-                       if(!Arrays.equals(array2d[i],lastarray2d[i])){
-                        mark=false;
-            textArea_A.append("恭喜你，拼图成功");
-                       }
+                    for(int i = 0; i < array2d.length; i++){
+                        if(!Arrays.equals(array2d[i],lastarray2d[i])){
+                            mark=false;
+                            textArea_A.append("恭喜你，拼图成功");
+                        }
                     }
 
-        }
-if (mark){
-    System.out.println("成功");
-}
+                }
+                if (mark){
+                    System.out.println("拼图成功");
+                }
 
 
 
@@ -136,6 +135,9 @@ if (mark){
         label_foreground.setIcon(new ImageIcon(imgURL999));
         label_foreground.setBounds(0,0,384,512);
         myPanel.add(label_foreground);
+
+
+
 
         label_txt.setText("你移动了");
         label_txt.setBounds(0,0,200,30);
